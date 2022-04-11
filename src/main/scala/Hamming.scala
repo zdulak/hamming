@@ -1,7 +1,4 @@
-object HammingApp extends App {
-  println(hammingDistance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT"))
-  println(hammingDistance("GAGCCTACTAACGGGAT", "CATCGTAA"))
-
+object Hamming {
   def hammingDistance(first: String, second: String): Option[Int] = {
     if (first.length != second.length) None else {
       Some(first.zip(second).foldLeft(0) {
